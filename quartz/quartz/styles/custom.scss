@@ -1,3 +1,215 @@
+// LUX UNIVERSE Custom Styles
+// Typography based on Inter / Space Grotesk / JetBrains Mono
+
 @use "./base.scss";
 
-// put your custom CSS here!
+// ============================================
+// CSS VARIABLES
+// ============================================
+
+:root {
+  // Font families
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "San Francisco", Roboto, "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-header: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  // Font sizes (type scale)
+  --fs-h1: 2.25rem;      // 36px
+  --fs-h2: 1.62671rem;   // ~26px
+  --fs-h3: 1.38316rem;   // ~22px
+  --fs-h4: 1rem;         // 16px
+  --fs-h5: 0.85028rem;   // ~14px
+  --fs-h6: 0.78405rem;   // ~12.5px
+  --fs-body: 1rem;       // 16px
+  --fs-nav: 0.9rem;
+  --fs-footer: 0.82rem;
+  --fs-code: 0.85rem;
+  --fs-dropcap: 5rem;    // 80px
+
+  // Line heights
+  --lh-body: 1.55;
+  --lh-h1: 1.2;
+  --lh-code: 1.5;
+  --lh-table: 1.45;
+
+  // Content width
+  --content-max-width: 720px;
+}
+
+// ============================================
+// BASE TYPOGRAPHY
+// ============================================
+
+html {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+}
+
+// ============================================
+// HEADINGS
+// ============================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: var(--lh-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--fs-h4);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: var(--fs-h5);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: var(--fs-h6);
+  font-weight: 500;
+}
+
+// ============================================
+// CENTERED CONTENT LAYOUT
+// ============================================
+
+.center {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+article {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+
+  p {
+    line-height: var(--lh-body);
+    margin-bottom: 1.5em;
+  }
+}
+
+// Page content centering
+.page-content,
+#quartz-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// ============================================
+// CODE & MONOSPACE
+// ============================================
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-code);
+  line-height: var(--lh-code);
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+// Inline code
+:not(pre) > code {
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+// ============================================
+// NAVIGATION & FOOTER
+// ============================================
+
+nav {
+  font-size: var(--fs-nav);
+}
+
+footer {
+  font-size: var(--fs-footer);
+  font-weight: 100;
+  font-family: var(--font-mono);
+}
+
+// ============================================
+// BLOCKQUOTES
+// ============================================
+
+blockquote {
+  font-weight: 700;
+  font-style: italic;
+  border-left: 3px solid var(--secondary);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+// ============================================
+// TABLES
+// ============================================
+
+table {
+  line-height: var(--lh-table);
+}
+
+// ============================================
+// DROPCAP (first letter of articles)
+// ============================================
+
+article > p:first-of-type::first-letter {
+  font-size: var(--fs-dropcap);
+  font-weight: 700;
+  font-family: var(--font-header);
+  float: left;
+  line-height: 0.8;
+  padding-right: 0.1em;
+  margin-top: 0.1em;
+}
+
+// ============================================
+// LINKS
+// ============================================
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// Internal links (wikilinks)
+a.internal {
+  text-decoration-style: dotted;
+}
+
+// ============================================
+// DARK MODE ADJUSTMENTS
+// ============================================
+
+@media (prefers-color-scheme: dark) {
+  // Dark mode inherits from Quartz config colors
+}

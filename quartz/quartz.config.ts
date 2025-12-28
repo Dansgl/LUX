@@ -21,9 +21,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "EB Garamond",
-        body: "EB Garamond",
-        code: "IBM Plex Mono",
+        header: "Space Grotesk",
+        body: "Inter",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
