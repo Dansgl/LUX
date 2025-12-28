@@ -15,11 +15,12 @@
     "research",
     "vault",
     "ai",
-    "claude"
+    "claude",
+    "openrouter"
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.32.0"
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

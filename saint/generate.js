@@ -1,7 +1,7 @@
 /**
  * ISIDORE AI GENERATION
  *
- * Uses Claude to analyze the vault report and propose new pages.
+ * Uses Claude via OpenRouter to analyze the vault report and propose new pages.
  * Reads report.json, calls Claude Haiku with evaluate.md prompt,
  * and saves proposals to queue.json.
  *
@@ -9,10 +9,9 @@
  *   node saint/generate.js
  *
  * Requires:
- *   ANTHROPIC_API_KEY environment variable
+ *   OPENROUTER_API_KEY environment variable
  */
 
-const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');
 
@@ -20,23 +19,24 @@ const REPORT_PATH = path.join(__dirname, 'report.json');
 const QUEUE_PATH = path.join(__dirname, 'queue.json');
 const EVALUATE_PROMPT_PATH = path.join(__dirname, 'prompts', 'evaluate.md');
 
-const MODEL = 'claude-3-5-haiku-20241022';
+const MODEL = 'anthropic/claude-3-5-haiku';
+const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MAX_PROPOSALS = 5;
 
 /**
- * Initialize the Anthropic client
+ * Get API key from environment
  */
-function createClient() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+function getApiKey() {
+  const apiKey = process.env.OPENROUTER_API_KEY;
 
   if (!apiKey) {
-    console.error('Error: ANTHROPIC_API_KEY environment variable is not set.');
+    console.error('Error: OPENROUTER_API_KEY environment variable is not set.');
     console.error('Please set it before running this script:');
-    console.error('  export ANTHROPIC_API_KEY=your-api-key');
+    console.error('  export OPENROUTER_API_KEY=your-api-key');
     process.exit(1);
   }
 
-  return new Anthropic({ apiKey });
+  return apiKey;
 }
 
 /**
@@ -103,6 +103,37 @@ Return your proposals as a JSON array.`;
 }
 
 /**
+ * Call OpenRouter API
+ */
+async function callOpenRouter(apiKey, systemPrompt, userMessage) {
+  const response = await fetch(OPENROUTER_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': 'https://github.com/Dansgl/LUX',
+      'X-Title': 'Isidore Research Daemon'
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 4096,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userMessage }
+      ]
+    })
+  });
+
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(`OpenRouter API error (${response.status}): ${error}`);
+  }
+
+  const data = await response.json();
+  return data.choices[0].message.content;
+}
+
+/**
  * Extract JSON proposals from Claude's response
  */
 function parseProposals(responseText) {
@@ -156,39 +187,17 @@ async function generate() {
   console.log('Isidore awakens for AI evaluation...\n');
 
   // Initialize
-  const client = createClient();
+  const apiKey = getApiKey();
   const report = loadReport();
   const systemPrompt = loadEvaluatePrompt();
   const userMessage = formatReportForPrompt(report);
 
   console.log(`Loaded report from ${report.timestamp}`);
   console.log(`Found ${report.stats.orphanedReferences} orphaned references`);
-  console.log(`Calling Claude (${MODEL})...\n`);
+  console.log(`Calling Claude via OpenRouter (${MODEL})...\n`);
 
   try {
-    // Call Claude API
-    // Note: Web search requires extended thinking or specific feature flags.
-    // For now, we rely on the model's training data.
-    // To enable web search in the future, add:
-    //   betas: ['web-search-2025-03-05']
-    // and the model will automatically search when needed.
-    const response = await client.messages.create({
-      model: MODEL,
-      max_tokens: 4096,
-      system: systemPrompt,
-      messages: [
-        {
-          role: 'user',
-          content: userMessage
-        }
-      ]
-    });
-
-    // Extract text response
-    const responseText = response.content
-      .filter(block => block.type === 'text')
-      .map(block => block.text)
-      .join('\n');
+    const responseText = await callOpenRouter(apiKey, systemPrompt, userMessage);
 
     console.log('Response received. Parsing proposals...\n');
 
@@ -236,15 +245,7 @@ async function generate() {
     console.log('\nIsidore rests.\n');
 
   } catch (error) {
-    if (error.status === 401) {
-      console.error('Error: Invalid API key. Please check your ANTHROPIC_API_KEY.');
-    } else if (error.status === 429) {
-      console.error('Error: Rate limit exceeded. Please wait and try again.');
-    } else if (error.status === 400) {
-      console.error('Error: Bad request:', error.message);
-    } else {
-      console.error('Error calling Claude API:', error.message || error);
-    }
+    console.error('Error calling OpenRouter:', error.message || error);
     process.exit(1);
   }
 }

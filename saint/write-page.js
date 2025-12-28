@@ -1,7 +1,7 @@
 /**
  * ISIDORE PAGE WRITER
  *
- * Takes an approved proposal and generates the page content using Claude.
+ * Takes an approved proposal and generates the page content using Claude via OpenRouter.
  * Uses prompts/write.md as the system prompt.
  *
  * Usage:
@@ -10,10 +10,9 @@
  *   node saint/write-page.js --all              # Write all approved proposals
  *
  * Requires:
- *   ANTHROPIC_API_KEY environment variable
+ *   OPENROUTER_API_KEY environment variable
  */
 
-const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');
 
@@ -21,7 +20,8 @@ const QUEUE_PATH = path.join(__dirname, 'queue.json');
 const VAULT_PATH = path.join(__dirname, '..', 'vault');
 const WRITE_PROMPT_PATH = path.join(__dirname, 'prompts', 'write.md');
 
-const MODEL = 'claude-3-5-haiku-20241022';
+const MODEL = 'anthropic/claude-3-5-haiku';
+const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
 /**
  * Map rung names to folder paths
@@ -62,19 +62,50 @@ const RUNG_TO_FOLDER = {
 };
 
 /**
- * Initialize the Anthropic client
+ * Get API key from environment
  */
-function createClient() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+function getApiKey() {
+  const apiKey = process.env.OPENROUTER_API_KEY;
 
   if (!apiKey) {
-    console.error('Error: ANTHROPIC_API_KEY environment variable is not set.');
+    console.error('Error: OPENROUTER_API_KEY environment variable is not set.');
     console.error('Please set it before running this script:');
-    console.error('  export ANTHROPIC_API_KEY=your-api-key');
+    console.error('  export OPENROUTER_API_KEY=your-api-key');
     process.exit(1);
   }
 
-  return new Anthropic({ apiKey });
+  return apiKey;
+}
+
+/**
+ * Call OpenRouter API
+ */
+async function callOpenRouter(apiKey, systemPrompt, userMessage) {
+  const response = await fetch(OPENROUTER_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': 'https://github.com/Dansgl/LUX',
+      'X-Title': 'Isidore Research Daemon'
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 4096,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userMessage }
+      ]
+    })
+  });
+
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(`OpenRouter API error (${response.status}): ${error}`);
+  }
+
+  const data = await response.json();
+  return data.choices[0].message.content;
 }
 
 /**
@@ -114,12 +145,7 @@ function loadWritePrompt() {
  * Convert title to filename
  */
 function titleToFilename(title) {
-  return title
-    .toLowerCase()
-    .replace(/['"]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-    + '.md';
+  return title + '.md';
 }
 
 /**
@@ -201,31 +227,14 @@ function extractMarkdown(responseText) {
 /**
  * Write a single page
  */
-async function writePage(client, systemPrompt, proposal) {
+async function writePage(apiKey, systemPrompt, proposal) {
   console.log(`\nWriting: "${proposal.title}"`);
   console.log(`  Rung: ${proposal.rung}`);
 
   const userMessage = formatProposalForPrompt(proposal);
 
   try {
-    const response = await client.messages.create({
-      model: MODEL,
-      max_tokens: 4096,
-      system: systemPrompt,
-      messages: [
-        {
-          role: 'user',
-          content: userMessage
-        }
-      ]
-    });
-
-    // Extract text response
-    const responseText = response.content
-      .filter(block => block.type === 'text')
-      .map(block => block.text)
-      .join('\n');
-
+    const responseText = await callOpenRouter(apiKey, systemPrompt, userMessage);
     const markdown = extractMarkdown(responseText);
 
     // Determine output path
@@ -275,7 +284,7 @@ async function main() {
   console.log('Isidore begins writing...\n');
 
   // Initialize
-  const client = createClient();
+  const apiKey = getApiKey();
   const queue = loadQueue();
   const systemPrompt = loadWritePrompt();
 
@@ -316,7 +325,7 @@ async function main() {
   // Write each page
   const results = [];
   for (const proposal of toWrite) {
-    const result = await writePage(client, systemPrompt, proposal);
+    const result = await writePage(apiKey, systemPrompt, proposal);
     results.push(result);
 
     // Remove from approved if successful
