@@ -15,6 +15,16 @@
 const fs = require('fs');
 const path = require('path');
 
+// Load .env file if it exists
+const envPath = path.join(__dirname, '.env');
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, 'utf-8');
+  envContent.split('\n').forEach(line => {
+    const [key, ...val] = line.split('=');
+    if (key && val.length) process.env[key.trim()] = val.join('=').trim();
+  });
+}
+
 const REPORT_PATH = path.join(__dirname, 'report.json');
 const QUEUE_PATH = path.join(__dirname, 'queue.json');
 const EVALUATE_PROMPT_PATH = path.join(__dirname, 'prompts', 'evaluate.md');

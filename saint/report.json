@@ -1,40 +1,12 @@
 {
-  "timestamp": "2025-12-28T19:31:39.530Z",
+  "timestamp": "2025-12-28T20:35:31.059Z",
   "stats": {
-    "totalPages": 20,
-    "totalLinks": 75,
-    "orphanedReferences": 56,
-    "deadEnds": 2
+    "totalPages": 33,
+    "totalLinks": 82,
+    "orphanedReferences": 53,
+    "deadEnds": 6
   },
   "orphans": [
-    {
-      "title": "Simone Weil on Attention",
-      "referencedBy": [
-        "Rosalía",
-        "The Question of Interiority",
-        "Hildegard of Bingen",
-        "The Saint as Mood Board",
-        "What Is Sanctity Now",
-        "cuprins"
-      ]
-    },
-    {
-      "title": "Zurbarán's Light",
-      "referencedBy": [
-        "Rosalía",
-        "The Saint as Mood Board",
-        "cuprins"
-      ]
-    },
-    {
-      "title": "The London Symphony Orchestra",
-      "referencedBy": [
-        "Rosalía",
-        "The Barcelona Performance",
-        "The Voice",
-        "cuprins"
-      ]
-    },
     {
       "title": "Daníel Bjarnason",
       "referencedBy": [
@@ -59,34 +31,6 @@
       ]
     },
     {
-      "title": "Sincerity and Simulation",
-      "referencedBy": [
-        "The Question of Interiority",
-        "The Saint as Mood Board",
-        "Difficulty as Positioning",
-        "What Is Sanctity Now",
-        "confession",
-        "cuprins"
-      ]
-    },
-    {
-      "title": "Labor as Production Value",
-      "referencedBy": [
-        "The Translation Chain",
-        "The Voice",
-        "cuprins"
-      ]
-    },
-    {
-      "title": "The 14 Languages",
-      "referencedBy": [
-        "The Translation Chain",
-        "The Voice",
-        "The Saint as Mood Board",
-        "cuprins"
-      ]
-    },
-    {
       "title": "The Cloth / Stillness",
       "referencedBy": [
         "The Barcelona Performance",
@@ -97,14 +41,6 @@
       "title": "The Body as Museum",
       "referencedBy": [
         "The Barcelona Performance"
-      ]
-    },
-    {
-      "title": "The Mood Board as Practice",
-      "referencedBy": [
-        "The Barcelona Performance",
-        "The Curatorial Stack",
-        "cuprins"
       ]
     },
     {
@@ -125,17 +61,10 @@
       ]
     },
     {
-      "title": "Female Mystics",
-      "referencedBy": [
-        "Hildegard of Bingen",
-        "The 14 Saints",
-        "cuprins"
-      ]
-    },
-    {
       "title": "Saint Marina the Monk",
       "referencedBy": [
         "The 14 Saints",
+        "Female Mystics",
         "cuprins"
       ]
     },
@@ -143,6 +72,7 @@
       "title": "Rabi'a al-Adawiyya",
       "referencedBy": [
         "The 14 Saints",
+        "Female Mystics",
         "cuprins"
       ]
     },
@@ -150,6 +80,7 @@
       "title": "Mary of Egypt",
       "referencedBy": [
         "The 14 Saints",
+        "Female Mystics",
         "cuprins"
       ]
     },
@@ -157,32 +88,87 @@
       "title": "Joan of Arc",
       "referencedBy": [
         "The 14 Saints",
+        "Female Mystics",
         "cuprins"
       ]
     },
     {
-      "title": "The Saint as Aesthetic Category",
+      "title": "Flamenco Modernism",
       "referencedBy": [
-        "The 14 Saints",
-        "What Is Sanctity Now",
+        "Zurbarán's Light"
+      ]
+    },
+    {
+      "title": "Digital Flamenco",
+      "referencedBy": [
+        "The Mood Board as Practice"
+      ]
+    },
+    {
+      "title": "The Vatican as PR Partner",
+      "referencedBy": [
+        "The Saint as Mood Board",
         "cuprins"
+      ]
+    },
+    {
+      "title": "The Cardinal's Letter",
+      "referencedBy": [
+        "The Saint as Mood Board",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Anti-Dopamine Marketing",
+      "referencedBy": [
+        "Difficulty as Positioning",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The Luxury Tier",
+      "referencedBy": [
+        "Difficulty as Positioning",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Sir Simon Rattle",
+      "referencedBy": [
+        "The London Symphony Orchestra"
+      ]
+    },
+    {
+      "title": "Cuprins",
+      "referencedBy": [
+        "The 14 Languages"
+      ]
+    },
+    {
+      "title": "Linguistic Embodiment",
+      "referencedBy": [
+        "The 14 Languages"
       ]
     }
   ],
   "deadEnds": [
+    "Vibe Coding",
+    "Lux test test",
+    "last test i gave u my heart",
     "prayer",
+    "test test",
     "void"
   ],
   "coverage": {
     "I-self": 3,
     "II-body": 2,
-    "III-reference": 2,
-    "IV-community": 1,
-    "V-system": 1,
-    "VI-field": 1,
-    "VII-world": 1,
+    "III-reference": 3,
+    "IV-community": 3,
+    "V-system": 4,
+    "VI-field": 3,
+    "VII-world": 2,
     "VIII-method": 3,
-    "hidden": 5,
-    "root": 1
+    "hidden": 8,
+    "root": 2
   }
 }

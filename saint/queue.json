@@ -1,8 +1,13 @@
 {
-  "date": "2025-12-28T20:22:53.071Z",
+  "date": "2025-12-28T20:30:23.841Z",
   "proposals": [],
   "approved": [],
-  "rejected": [],
+  "rejected": [
+    {
+      "title": "Female Mystics",
+      "reason": "Already exists"
+    }
+  ],
   "written": [
     {
       "title": "Simone Weil on Attention",
@@ -92,6 +97,74 @@
       "content_type": "text + images",
       "written_at": "2025-12-28T20:27:00.855Z",
       "path": "/Users/dan/LUX/LUX/vault/III-reference/Zurbarán's Light.md"
+    },
+    {
+      "title": "The London Symphony Orchestra",
+      "rung": "V-system",
+      "rationale": "Critical missing link in understanding the production infrastructure of *Lux*, revealing the album's complex musical genealogy",
+      "verification": "Confirmed collaboration with Rosalía on album recordings, significant classical music context",
+      "links_to": [
+        "Rosalía",
+        "The Barcelona Performance",
+        "The Voice"
+      ],
+      "links_from": [
+        "cuprins"
+      ],
+      "content_type": "text + audio",
+      "written_at": "2025-12-28T20:32:40.235Z",
+      "path": "/Users/dan/LUX/LUX/vault/V-system/The London Symphony Orchestra.md"
+    },
+    {
+      "title": "Labor as Production Value",
+      "rung": "V-system",
+      "rationale": "Explores the economic and aesthetic dimensions of artistic labor in contemporary music production",
+      "verification": "Critical theory sources on immaterial labor, music industry economics",
+      "links_to": [
+        "The Translation Chain",
+        "The Voice",
+        "Sincerity and Simulation"
+      ],
+      "links_from": [
+        "cuprins"
+      ],
+      "content_type": "text",
+      "written_at": "2025-12-28T20:32:49.409Z",
+      "path": "/Users/dan/LUX/LUX/vault/V-system/Labor as Production Value.md"
+    },
+    {
+      "title": "The Mood Board as Practice",
+      "rung": "IV-community",
+      "rationale": "Analyzes the curatorial and creative methodology of visual-sonic assemblage in Rosalía's work",
+      "verification": "Design theory, contemporary art practices, Rosalía's documented creative process",
+      "links_to": [
+        "The Barcelona Performance",
+        "The Curatorial Stack"
+      ],
+      "links_from": [
+        "cuprins"
+      ],
+      "content_type": "text + images",
+      "written_at": "2025-12-28T20:33:00.898Z",
+      "path": "/Users/dan/LUX/LUX/vault/IV-community/The Mood Board as Practice.md"
+    },
+    {
+      "title": "The 14 Languages",
+      "rung": "VI-field",
+      "rationale": "Investigates the linguistic complexity and translational strategies in *Lux*",
+      "verification": "Confirmed multilingual aspects of the album, translation theory",
+      "links_to": [
+        "The Translation Chain",
+        "The Voice",
+        "The Saint as Mood Board",
+        "Sincerity and Simulation"
+      ],
+      "links_from": [
+        "cuprins"
+      ],
+      "content_type": "text",
+      "written_at": "2025-12-28T20:33:13.624Z",
+      "path": "/Users/dan/LUX/LUX/vault/VI-field/The 14 Languages.md"
     }
   ]
 }
