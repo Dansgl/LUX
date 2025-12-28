@@ -1,0 +1,188 @@
+{
+  "timestamp": "2025-12-28T19:31:39.530Z",
+  "stats": {
+    "totalPages": 20,
+    "totalLinks": 75,
+    "orphanedReferences": 56,
+    "deadEnds": 2
+  },
+  "orphans": [
+    {
+      "title": "Simone Weil on Attention",
+      "referencedBy": [
+        "Rosalía",
+        "The Question of Interiority",
+        "Hildegard of Bingen",
+        "The Saint as Mood Board",
+        "What Is Sanctity Now",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Zurbarán's Light",
+      "referencedBy": [
+        "Rosalía",
+        "The Saint as Mood Board",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The London Symphony Orchestra",
+      "referencedBy": [
+        "Rosalía",
+        "The Barcelona Performance",
+        "The Voice",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Daníel Bjarnason",
+      "referencedBy": [
+        "Rosalía",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The \"No AI\" Disclaimer",
+      "referencedBy": [
+        "Rosalía",
+        "The Translation Chain",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Ryōnen Gensō",
+      "referencedBy": [
+        "The Question of Interiority",
+        "What Is Sanctity Now",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Sincerity and Simulation",
+      "referencedBy": [
+        "The Question of Interiority",
+        "The Saint as Mood Board",
+        "Difficulty as Positioning",
+        "What Is Sanctity Now",
+        "confession",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Labor as Production Value",
+      "referencedBy": [
+        "The Translation Chain",
+        "The Voice",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The 14 Languages",
+      "referencedBy": [
+        "The Translation Chain",
+        "The Voice",
+        "The Saint as Mood Board",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The Cloth / Stillness",
+      "referencedBy": [
+        "The Barcelona Performance",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The Body as Museum",
+      "referencedBy": [
+        "The Barcelona Performance"
+      ]
+    },
+    {
+      "title": "The Mood Board as Practice",
+      "referencedBy": [
+        "The Barcelona Performance",
+        "The Curatorial Stack",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The Museum as Venue",
+      "referencedBy": [
+        "The Barcelona Performance",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The Bibliography as Method",
+      "referencedBy": [
+        "Hildegard of Bingen",
+        "The 14 Saints",
+        "The Saint as Mood Board",
+        "The Curatorial Stack",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Female Mystics",
+      "referencedBy": [
+        "Hildegard of Bingen",
+        "The 14 Saints",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Saint Marina the Monk",
+      "referencedBy": [
+        "The 14 Saints",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Rabi'a al-Adawiyya",
+      "referencedBy": [
+        "The 14 Saints",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Mary of Egypt",
+      "referencedBy": [
+        "The 14 Saints",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "Joan of Arc",
+      "referencedBy": [
+        "The 14 Saints",
+        "cuprins"
+      ]
+    },
+    {
+      "title": "The Saint as Aesthetic Category",
+      "referencedBy": [
+        "The 14 Saints",
+        "What Is Sanctity Now",
+        "cuprins"
+      ]
+    }
+  ],
+  "deadEnds": [
+    "prayer",
+    "void"
+  ],
+  "coverage": {
+    "I-self": 3,
+    "II-body": 2,
+    "III-reference": 2,
+    "IV-community": 1,
+    "V-system": 1,
+    "VI-field": 1,
+    "VII-world": 1,
+    "VIII-method": 3,
+    "hidden": 5,
+    "root": 1
+  }
+}
