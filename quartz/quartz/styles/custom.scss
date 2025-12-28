@@ -24,7 +24,6 @@
   --fs-nav: 0.9rem;
   --fs-footer: 0.82rem;
   --fs-code: 0.85rem;
-  --fs-dropcap: 5rem;    // 80px
 
   // Line heights
   --lh-body: 1.55;
@@ -141,17 +140,11 @@ pre {
 }
 
 // ============================================
-// NAVIGATION & FOOTER
+// HIDE FOOTER
 // ============================================
 
-nav {
-  font-size: var(--fs-nav);
-}
-
 footer {
-  font-size: var(--fs-footer);
-  font-weight: 100;
-  font-family: var(--font-mono);
+  display: none !important;
 }
 
 // ============================================
@@ -161,7 +154,7 @@ footer {
 blockquote {
   font-weight: 700;
   font-style: italic;
-  border-left: 3px solid var(--secondary);
+  border-left: 3px solid var(--gray);
   padding-left: 1.5rem;
   margin: 2rem 0;
 }
@@ -175,26 +168,14 @@ table {
 }
 
 // ============================================
-// DROPCAP (first letter of articles)
-// ============================================
-
-article > p:first-of-type::first-letter {
-  font-size: var(--fs-dropcap);
-  font-weight: 700;
-  font-family: var(--font-header);
-  float: left;
-  line-height: 0.8;
-  padding-right: 0.1em;
-  margin-top: 0.1em;
-}
-
-// ============================================
-// LINKS
+// LINKS - Black with underline only
 // ============================================
 
 a {
+  color: var(--dark) !important;
   text-decoration: underline;
   text-underline-offset: 0.15em;
+  background: none !important;
 
   &:hover {
     text-decoration-thickness: 2px;
@@ -203,13 +184,44 @@ a {
 
 // Internal links (wikilinks)
 a.internal {
-  text-decoration-style: dotted;
+  color: var(--dark) !important;
+  background: none !important;
 }
 
 // ============================================
-// DARK MODE ADJUSTMENTS
+// HIDE SIDEBARS
 // ============================================
 
-@media (prefers-color-scheme: dark) {
-  // Dark mode inherits from Quartz config colors
+.left-sidebar,
+.right-sidebar {
+  display: none !important;
+}
+
+// Make content full width when sidebars hidden
+.page {
+  display: block !important;
+
+  & > .center {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+// ============================================
+// MINIMAL HEADER - Only search & dark mode
+// ============================================
+
+.page-header {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Hide page title in header (keep only search/darkmode)
+.page-title {
+  display: none !important;
 }

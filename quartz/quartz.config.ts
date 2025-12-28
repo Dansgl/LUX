@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "lux.glitch.ro",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "hidden"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
