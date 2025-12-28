@@ -1,6 +1,3 @@
-Here's a draft for the page:
-
-```yaml
 ---
 title: Romani Performance Traditions
 rung: VII. THE WORLD

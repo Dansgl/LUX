@@ -1,6 +1,3 @@
-Here's a draft for the Flamenco Genealogy page:
-
-```yaml
 ---
 title: Flamenco Genealogy
 rung: III. THE REFERENCE

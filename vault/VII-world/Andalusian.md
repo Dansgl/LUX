@@ -1,5 +1,3 @@
-Here's a draft for the "Andalusian" page:
-
 ---
 title: Andalusian
 rung: VII. THE WORLD

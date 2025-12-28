@@ -1,6 +1,3 @@
-Here's a draft for the "Digital Performance" page:
-
-```yaml
 ---
 title: Digital Performance
 rung: V. THE SYSTEM

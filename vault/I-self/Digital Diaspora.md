@@ -1,5 +1,3 @@
-Here's a draft for the "Digital Diaspora" page:
-
 ---
 title: Digital Diaspora
 rung: IV. COMMUNITY

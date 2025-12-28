@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: Flamenco Futurism
 rung: VI. THE FIELD

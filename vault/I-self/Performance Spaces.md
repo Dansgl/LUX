@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: Performance Spaces
 rung: IV. THE COMMUNITY

@@ -1,5 +1,3 @@
-Here's a draft for the "Motomami" page:
-
 ---
 title: Motomami
 rung: IV. THE COMMUNITY

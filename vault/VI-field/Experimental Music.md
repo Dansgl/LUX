@@ -1,6 +1,3 @@
-Here's a draft for the "Experimental Music" page:
-
-```yaml
 ---
 title: Experimental Music
 rung: VI. The Field

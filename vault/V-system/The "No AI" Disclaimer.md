@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: The "No AI" Disclaimer
 rung: V. THE SYSTEM

@@ -1,6 +1,3 @@
-Here's a draft for the "Impermanence" page:
-
-```yaml
 ---
 title: Impermanence
 rung: VI. The Field

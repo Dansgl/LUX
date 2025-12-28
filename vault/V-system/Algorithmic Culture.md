@@ -1,6 +1,3 @@
-Here's a draft for the "Algorithmic Culture" page:
-
-```yaml
 ---
 title: Algorithmic Culture
 rung: V. THE SYSTEM

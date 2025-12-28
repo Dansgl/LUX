@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: Daníel Bjarnason
 rung: III. The Reference

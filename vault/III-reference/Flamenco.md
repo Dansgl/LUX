@@ -1,6 +1,3 @@
-Here's a draft for the "Flamenco" page:
-
-```yaml
 ---
 title: Flamenco
 rung: III. REFERENCE

@@ -1,6 +1,3 @@
-Here's a draft for the Israel Galván page:
-
-```yaml
 ---
 title: Israel Galván
 rung: III. The Reference

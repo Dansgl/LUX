@@ -1,5 +1,3 @@
-Here's a draft page for "The Bibliography as Method":
-
 ---
 title: The Bibliography as Method
 rung: VIII. THE METHOD

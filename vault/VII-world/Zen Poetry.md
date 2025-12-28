@@ -1,6 +1,3 @@
-Here's a draft for the Zen Poetry page:
-
-```yaml
 ---
 title: Zen Poetry
 rung: VII. WORLD

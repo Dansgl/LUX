@@ -1,6 +1,3 @@
-Here's a draft for the page:
-
-```yaml
 ---
 title: Marina Abramović
 rung: III. The Reference

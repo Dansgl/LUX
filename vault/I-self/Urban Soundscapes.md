@@ -1,6 +1,3 @@
-Here's a draft for the Urban Soundscapes page:
-
-```yaml
 ---
 title: Urban Soundscapes
 rung: IV. COMMUNITY

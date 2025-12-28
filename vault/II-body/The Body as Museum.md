@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: The Body as Museum
 rung: II. THE BODY

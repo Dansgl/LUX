@@ -1,5 +1,3 @@
-Here's a draft for the "Radical Reimagining" page:
-
 ---
 title: Radical Reimagining
 rung: VI. Field

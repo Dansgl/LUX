@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: Rosalía's Aesthetic Politics
 rung: VI. Field

@@ -1,5 +1,3 @@
-Here's a draft for the "Duende" page:
-
 ---
 title: Duende
 rung: II. THE BODY

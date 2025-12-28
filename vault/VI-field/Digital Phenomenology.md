@@ -1,6 +1,3 @@
-Here's a draft for the Digital Phenomenology page:
-
-```yaml
 ---
 title: Digital Phenomenology
 rung: VI. Field

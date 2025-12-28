@@ -1,6 +1,3 @@
-Here's a draft for the MOTOMAMI Soundscape page:
-
-```yaml
 ---
 title: MOTOMAMI Soundscape
 rung: V. THE SYSTEM

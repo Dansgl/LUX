@@ -1,5 +1,3 @@
-Here's a draft for the "Transmigration" page:
-
 ---
 title: Transmigration
 rung: VI. The Field

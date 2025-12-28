@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: Andalusian Culture
 rung: VII. THE WORLD

@@ -1,6 +1,3 @@
-Here's a draft for the page:
-
-```yaml
 ---
 title: La Argentinita
 rung: III. REFERENCE

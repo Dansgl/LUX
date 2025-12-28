@@ -1,5 +1,3 @@
-Here's a draft for the page:
-
 ---
 title: Saint Marina the Monk
 rung: VII. THE WORLD

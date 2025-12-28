@@ -1,6 +1,3 @@
-Here's a draft for the "Duende" page:
-
-```yaml
 ---
 title: Duende
 rung: III. The Reference

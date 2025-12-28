@@ -1,5 +1,3 @@
-Here's a draft for the Flamenco page:
-
 ---
 title: Flamenco
 rung: V. SYSTEM
