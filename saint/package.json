@@ -1,0 +1,25 @@
+{
+  "name": "isidore",
+  "version": "1.0.0",
+  "description": "Research daemon for LUX UNIVERSE - identifies gaps and proposes new content",
+  "main": "index.js",
+  "scripts": {
+    "evaluate": "node index.js",
+    "generate": "node generate.js",
+    "approve": "node approve.js",
+    "write": "node write-page.js",
+    "write-all": "node write-page.js --all",
+    "full-cycle": "node index.js && node generate.js"
+  },
+  "keywords": [
+    "research",
+    "vault",
+    "ai",
+    "claude"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0"
+  }
+}
