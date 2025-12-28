@@ -173,19 +173,27 @@ table {
 
 a {
   color: var(--dark) !important;
-  text-decoration: underline;
+  text-decoration: underline !important;
+  text-decoration-color: var(--gray) !important;
   text-underline-offset: 0.15em;
   background: none !important;
 
   &:hover {
     text-decoration-thickness: 2px;
+    text-decoration-color: var(--dark) !important;
   }
 }
 
 // Internal links (wikilinks)
 a.internal {
   color: var(--dark) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--gray) !important;
   background: none !important;
+
+  &:hover {
+    text-decoration-color: var(--dark) !important;
+  }
 }
 
 // ============================================

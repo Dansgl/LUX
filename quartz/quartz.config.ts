@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "lux.glitch.ro",
+    baseUrl: "dansgl.github.io/LUX",
     ignorePatterns: ["private", "templates", ".obsidian", "hidden"],
     defaultDateType: "modified",
     theme: {
