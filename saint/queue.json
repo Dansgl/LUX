@@ -1,4 +1,97 @@
 {
-  "date": null,
-  "proposals": []
+  "date": "2025-12-28T20:22:53.071Z",
+  "proposals": [],
+  "approved": [],
+  "rejected": [],
+  "written": [
+    {
+      "title": "Simone Weil on Attention",
+      "rung": "VI. THE FIELD",
+      "rationale": "Highly referenced concept bridging philosophical and artistic contemplation of focus, perception, and spiritual practice",
+      "verification": "Confirmed through Weil's writings 'Gravity and Grace' and scholarly analyses of her work on attention as a form of prayer and ethical engagement",
+      "links_to": [
+        "Rosalía",
+        "The Question of Interiority",
+        "What Is Sanctity Now"
+      ],
+      "links_from": [
+        "Hildegard of Bingen",
+        "The Saint as Mood Board"
+      ],
+      "content_type": "text + images",
+      "written_at": "2025-12-28T20:26:19.160Z",
+      "path": "/Users/dan/LUX/LUX/vault/VI-field/Simone Weil on Attention.md"
+    },
+    {
+      "title": "The Saint as Aesthetic Category",
+      "rung": "VII. THE WORLD",
+      "rationale": "Critical framework for understanding sanctity as a complex cultural and artistic construct, particularly relevant to Rosalía's artistic project",
+      "verification": "Referenced in multiple pages, connects religious studies, art history, and contemporary performance theory",
+      "links_to": [
+        "The 14 Saints",
+        "What Is Sanctity Now",
+        "Rosalía"
+      ],
+      "links_from": [
+        "cuprins"
+      ],
+      "content_type": "text + images",
+      "written_at": "2025-12-28T20:26:30.178Z",
+      "path": "/Users/dan/LUX/LUX/vault/VII-world/The Saint as Aesthetic Category.md"
+    },
+    {
+      "title": "Sincerity and Simulation",
+      "rung": "V. THE SYSTEM",
+      "rationale": "Explores linguistic and cultural translation as an economic and artistic process, connecting language, labor, and artistic production",
+      "verification": "Connects references to language work, performance, and production value",
+      "links_to": [
+        "The Voice",
+        "Labor as Production Value",
+        "The 14 Languages"
+      ],
+      "links_from": [
+        "Rosalía",
+        "cuprins"
+      ],
+      "content_type": "text + video",
+      "written_at": "2025-12-28T20:26:39.040Z",
+      "path": "/Users/dan/LUX/LUX/vault/V-system/Sincerity and Simulation.md"
+    },
+    {
+      "title": "Female Mystics",
+      "rung": "IV. THE COMMUNITY",
+      "rationale": "Comprehensive exploration of female mystical traditions, providing context for Rosalía's artistic and spiritual lineage",
+      "verification": "Connects references to Saint Marina, Rabi'a al-Adawiyya, Mary of Egypt, and broader mystical practices",
+      "links_to": [
+        "Hildegard of Bingen",
+        "The 14 Saints",
+        "Rabi'a al-Adawiyya",
+        "Saint Marina the Monk",
+        "Mary of Egypt",
+        "Joan of Arc"
+      ],
+      "links_from": [
+        "cuprins"
+      ],
+      "content_type": "text + images",
+      "written_at": "2025-12-28T20:26:50.662Z",
+      "path": "/Users/dan/LUX/LUX/vault/IV-community/Female Mystics.md"
+    },
+    {
+      "title": "Zurbarán's Light",
+      "rung": "III. THE REFERENCE",
+      "rationale": "Investigates the visual and spiritual significance of light in Zurbarán's paintings, connecting to Rosalía's aesthetic and conceptual approach",
+      "verification": "Connects to multiple references about visual aesthetics and spiritual representation",
+      "links_to": [
+        "Rosalía",
+        "The Saint as Mood Board"
+      ],
+      "links_from": [
+        "cuprins"
+      ],
+      "content_type": "text + images",
+      "written_at": "2025-12-28T20:27:00.855Z",
+      "path": "/Users/dan/LUX/LUX/vault/III-reference/Zurbarán's Light.md"
+    }
+  ]
 }
